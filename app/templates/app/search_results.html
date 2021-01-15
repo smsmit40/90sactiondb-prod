@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<div class="container">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>plot</th>
+      <th>Year</th>
+      <th>id</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for film in films %}
+      <tr>
+        <td>{{ film.movie }}</td>
+        <td>{{ film.plot }}</td>
+        <td>{{ film.release_year }}</td>
+        <td>{{ film.movie_id}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

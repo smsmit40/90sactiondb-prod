@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+<div class="container">
+    <center><h1>90's Action Database</h1></center>
+    <h3>Welcome, Below is a random recommendation from the curated list of Action films from the 1990's.
+        If the film listed does not sound interesting you can press the button and get another recommendation to try!
+    We also have all of our films listed with the description and year of release! Enjoy!</h3>
+</div>
+
+
+<div class="container">
+    <center><h1>{{movie.movie}}</h1></center>
+    {% load static %}
+    <center><img height="400" width="300" src={{movie.url}} alt="{% static 'app/film_roll.jpg' %}"></center>
+    <h3>{{movie.plot}}</h3>
+
+
+<form method="post">
+    {% csrf_token %}
+    <button class="btn btn-primary" type="submit">Get New Rec!</button>
+</form>
+
+</div>
+<
+{% endblock %}
+
