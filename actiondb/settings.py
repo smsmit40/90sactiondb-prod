@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '6$y3s&nwv@exno^h!fk8jkdz7gb2)imf07&jgz1^_s%8)ks0x6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://actiondb90s.herokuapp.com']
 
@@ -136,3 +136,4 @@ MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 django_heroku.settings(locals())
+
