@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = '6$y3s&nwv@exno^h!fk8jkdz7gb2)imf07&jgz1^_s%8)ks0x6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['actiondb90s.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['https://actiondb90s.herokuapp.com']
 
 
 # Application definition
@@ -87,6 +88,8 @@ DATABASES = {
     }
 }
 
+db_from_evn= dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'].update(db_from_evn)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -126,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
 
