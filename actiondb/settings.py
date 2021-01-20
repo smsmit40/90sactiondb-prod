@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6$y3s&nwv@exno^h!fk8jkdz7gb2)imf07&jgz1^_s%8)ks0x6'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -77,16 +77,7 @@ WSGI_APPLICATION = 'actiondb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',
-#         'USER': 'postgres',
-#         'PASSWORD': 'dgil60515',
-#         'HOST': 'database-1.cw1cbduk9yq8.us-east-2.rds.amazonaws.com',
-#         'PORT': '5432',
-#     }
-# }
+
 
 DATABASES = {
     'default': {
